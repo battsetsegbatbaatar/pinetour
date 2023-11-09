@@ -129,24 +129,25 @@ console.log(max);
 
 // find special number
 let numbers = [2, 4, 7, 8, 10];
-let even = [];
-let odd = [];
-for (let i = 0; i < numbers.length; i++) {
-  if (i % 2 == 0) {
-    even = number;
-  } else odd = number;
-}
+let even = 0;
+let odd = 0;
 let specialNum = 0;
 for (let i = 0; i < numbers.length; i++) {
-  if (even % 2 == 1) {
-    if (even % 2 == 0) {
+  if (numbers[i] % 2 == 0) {
+    even++;
+  } else {
+    odd++;
+  }
+}
+for (let i = 0; i < numbers.length; i++) {
+  if (even == 1) {
+    if (numbers[i] % 2 == 0) {
       specialNum = i + 1;
-    } else {
-      specialNum = i + 1;
+      console.log(specialNum);
     }
-    if (even % 2 != 0) {
-      specialNum = i + 1;
-    } else {
+  }
+  if (odd == 1) {
+    if (numbers[i] % 2 !== 0) {
       specialNum = i + 1;
     }
   }
@@ -154,3 +155,15 @@ for (let i = 0; i < numbers.length; i++) {
 console.log(specialNum);
 
 // check magic cube
+function Cube() {
+  [
+    [2, 7, 6],
+    [9, 5, 1],
+    [4, 3, 8],
+  ];
+}
+for(let i=0;i<Cube[0].length;i++){
+  for(let j=0;j<Cube[0].length;j++)
+  const sum=Cube[j].[i]
+  console.log(sum)
+}
