@@ -21,23 +21,23 @@
 // console.log("pow", pow);
 // console.log(`${number} zereg ni ${pow}: ${result}`);
 
-let utga = 5;
+// let utga = 5;
 
-for (let num = 1; num <= utga; num++) {
-  let str = "";
-  console.log("num", num);
-  for (let j = 1; j <= utga; j++) {
-    str += "*";
-    // console.log("utga", j);
-  }
-  console.log(`${str}\n`);
-}
-for (let c = 1; c <= 1000; c++) {
-  for (let d = ""; (c %= 0); ) {
-    d += c;
-  }
-  // }console.log(b);
-}
+// for (let num = 1; num <= utga; num++) {
+//   let str = "";
+//   //   console.log("num", num);
+//   for (let j = utga; j >= num; j--) {
+//     str += "*";
+//     // console.log("utga", j);
+//   }
+//   console.log(`${str}\n`);
+// }
+// for (let c = 1; c <= 1000; c++) {
+//   for (let d = ""; (c %= 0); ) {
+//     d += c;
+//
+//   }console.log(b);
+// }
 //  bodlogo2
 // for(let a=12,b=18:)
 // do while bodlogo 1
