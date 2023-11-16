@@ -1,3 +1,4 @@
+// DOM change text
 function changeText() {
   const changet = document.getElementById("text");
   changet.innerText = "Pinecone became Unicorn";
@@ -5,7 +6,7 @@ function changeText() {
 }
 const change = document.getElementById("changeT");
 change.addEventListener("click", changeText);
-
+// dom-color-change
 const box = document.getElementById("Box");
 box.style.length = 50 + "px";
 box.style.width = 50 + "px";
@@ -19,3 +20,5 @@ function Box() {
 }
 const colorBox = document.getElementById("colorBox");
 colorBox.addEventListener("click", Box);
+// colorful circle
+const input = document.getElementById("input");
