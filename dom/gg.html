@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fruit Filter</title>
+    <style>
+      /* Add some basic styling for better presentation */
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <label for="fruitInput">Type a fruit:</label>
+    <input type="text" id="fruitInput" oninput="filterFruits()" />
+
+    <p>Filtered Fruits:</p>
+    <ul id="filteredFruits"></ul>
+
+    <script>
+      // List of fruits
+      const fruits = [
+        "Apple",
+        "Banana",
+        "Orange",
+        "Grapes",
+        "Watermelon",
+        "Mango",
+        "Strawberry",
+        "Pineapple",
+        "Cherry",
+      ];
+
+      function filterFruits() {
+        // Get the input value and convert it to lowercase for case-insensitive matching
+        const inputValue = document
+          .getElementById("fruitInput")
+          .value.toLowerCase();
+
+        // Filter the fruits based on the input value
+        const filteredFruits = fruits.filter((fruit) =>
+          fruit.toLowerCase().includes(inputValue)
+        );
+
+        // Display the filtered fruits in the list
+        const filteredFruitsList = document.getElementById("filteredFruits");
+        filteredFruitsList.innerHTML = "";
+        filteredFruits.forEach((fruit) => {
+          const listItem = document.createElement("li");
+          listItem.textContent = fruit;
+          filteredFruitsList.appendChild(listItem);
+        });
+      }
+    </script>
+  </body>
+</html>

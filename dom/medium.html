@@ -4,24 +4,57 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./medium.css" />
   </head>
   <body>
     <div>
       <!-- DOM change text -->
-      <div>
+      <div class="box">
         <h1 id="text">Pinecone</h1>
         <button id="changeT">Change Message</button>
       </div>
       <!-- dom-color-change -->
-      <div>
+      <div class="box">
         <div id="Box">Box</div>
         <button id="colorBox">change color box</button>
       </div>
-
       <!-- colorful circle -->
       <div>
         <input id="input" type="text" />
         <button id="gene">generate</button>
+        <div id="circle"></div>
+      </div>
+      <!-- dynamic search filter -->
+      <div>
+        <label for="">Type a friut</label>
+        <input type="text" id="friutInput" />
+        <p>Filtered friut:</p>
+        <ul id="filteredFriut"></ul>
+      </div>
+      <!-- image carousel -->
+      <div>
+        <div id="imgCarousel">
+          <img src="./download.jpeg" alt="" />
+          <img src="./download.jpeg" alt="" />
+          <img src="./download.jpeg" alt="" />
+          <img src="./download.jpeg" alt="" />
+          <img src="./download.jpeg" alt="" />
+        </div>
+        <div>
+          <button id="prevBtn"><</button>
+          <button id="nextBtn">></button>
+        </div>
+      </div>
+      <!-- shapes -->
+      <div id="squ"></div>
+      <!-- TO-DO list -->
+      <div id="app">
+        <h1>Vanilla JS Todo App</h1>
+        <div>
+          <input type="text" id="newTask" placeholder="Add a new task" />
+          <button id="click" onclick="btn()">Task</button>
+        </div>
+        <ul id="taskList"></ul>
       </div>
     </div>
     <script src="./medium.js"></script>
