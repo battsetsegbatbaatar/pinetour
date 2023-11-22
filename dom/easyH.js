@@ -47,6 +47,7 @@ function displayNone() {
 }
 const disNone = document.getElementById("disNone");
 disNone.addEventListener("click", displayNone);
+
 // create list
 // Use a loop (e.g., for or while) to generate a list of items dynamically and append them to an unordered list (<ul>)
 let input = 5;
@@ -81,3 +82,21 @@ function loop() {
   }
 }
 table.appendChild(loop);
+
+// dynamic dropdown options
+// Use a loop to populate a dropdown (<select>) with dynamic options.
+var dynamicOptions = [
+  "Option 1",
+  "Option 2",
+  "Option 3",
+  "Option 4",
+  "Option 5",
+];
+
+const dropdown = document.getElementById("dropdown");
+for (let i = 0; i < dropdown.length; i++) {
+  const option = document.createElement("option");
+  option.text = dynamicOptions[i];
+  option.value = dynamicOptions[i];
+  dropdown.add(option);
+}

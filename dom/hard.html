@@ -3,12 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Dynamic Dropdown</title>
   </head>
   <body>
-    <div>
-        
-    </div>
-    <script src="./hard.js"></script>
+    <!-- Your dropdown (select) element -->
+    <select id="dynamicDropdown"></select>
+
+    <script>
+      // Sample data for dynamic options
+      var dynamicOptions = [
+        "Option 1",
+        "Option 2",
+        "Option 3",
+        "Option 4",
+        "Option 5",
+      ];
+
+      // Get the dropdown element
+      var dropdown = document.getElementById("dynamicDropdown");
+
+      // Populate the dropdown with dynamic options using a loop
+      for (var i = 0; i < dynamicOptions.length; i++) {
+        // Create an option element
+        var option = document.createElement("option");
+
+        // Set the text content and value for the option
+        option.text = dynamicOptions[i];
+        option.value = dynamicOptions[i];
+
+        // Append the option to the dropdown
+        dropdown.add(option);
+      }
+    </script>
   </body>
 </html>
