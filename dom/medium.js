@@ -88,6 +88,10 @@ const output = document.getElementById("output");
 //   }
 // });
 // shapes
+function s(){
+  const squ=document.createElement("div")
+  
+}
 // TO-DO list
 const state = {
   tasks: [],
