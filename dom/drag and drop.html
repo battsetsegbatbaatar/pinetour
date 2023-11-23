@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./drag and drop.css" />
+  </head>
+  <body>
+    <h1>Drag and Drop</h1>
+    <div draggable="true" class="drag" id="drag1" ondragstart="drag(event)">
+      Drag me!
+    </div>
+    <div class="drop">Drop here!</div>
+    <h1>Drag and Drop 2</h1>
+    <div draggable="true" class="drag">Drag me!</div>
+    <div
+      ondrop="dropRef(event)"
+      ondragover="allowDrop(event)"
+      class="drop"
+      id="drop1"
+    >
+      Drop here!
+    </div>
+    <script src="./drag and drop.js"></script>
+  </body>
+</html>

@@ -3,55 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fruit Filter</title>
+    <title>Document</title>
     <style>
-      /* Add some basic styling for better presentation */
-      body {
-        font-family: Arial, sans-serif;
-        padding: 20px;
+      .drag {
+        width: 50px;
+        height: 50px;
+        background-color: aquamarine;
+      }
+
+      .drop {
+        width: 100px;
+        height: 50px;
+        border: dotted 3px black;
       }
     </style>
   </head>
   <body>
-    <label for="fruitInput">Type a fruit:</label>
-    <input type="text" id="fruitInput" oninput="filterFruits()" />
-
-    <p>Filtered Fruits:</p>
-    <ul id="filteredFruits"></ul>
-
+    <h1>Drag and Drop 2</h1>
+    <div draggable="true" class="drag" id="drag1" ondragstart="drag(event)">
+      Drag me!
+    </div>
+    <div
+      ondrop="drop(event)"
+      ondragover="allowDrop(event)"
+      class="drop"
+      id="drop1"
+    >
+      Drop here!
+    </div>
     <script>
-      // List of fruits
-      const fruits = [
-        "Apple",
-        "Banana",
-        "Orange",
-        "Grapes",
-        "Watermelon",
-        "Mango",
-        "Strawberry",
-        "Pineapple",
-        "Cherry",
-      ];
+      // Corrected the ID references and added IDs to the elements
 
-      function filterFruits() {
-        // Get the input value and convert it to lowercase for case-insensitive matching
-        const inputValue = document
-          .getElementById("fruitInput")
-          .value.toLowerCase();
+      // Drag start event
+      function drag(event) {
+        event.dataTransfer.setData("text", event.target.id);
+      }
 
-        // Filter the fruits based on the input value
-        const filteredFruits = fruits.filter((fruit) =>
-          fruit.toLowerCase().includes(inputValue)
-        );
+      // Allow drop event
+      function allowDrop(event) {
+        event.preventDefault();
+      }
 
-        // Display the filtered fruits in the list
-        const filteredFruitsList = document.getElementById("filteredFruits");
-        filteredFruitsList.innerHTML = "";
-        filteredFruits.forEach((fruit) => {
-          const listItem = document.createElement("li");
-          listItem.textContent = fruit;
-          filteredFruitsList.appendChild(listItem);
-        });
+      // Drop event
+      function drop(event) {
+        event.preventDefault();
+        var data = event.dataTransfer.getData("text");
+        var draggedElement = document.getElementById(data);
+        var dropZone = event.target;
+
+        // Append the dragged element to the drop zone
+        dropZone.appendChild(draggedElement);
       }
     </script>
   </body>

@@ -100,3 +100,5 @@ for (let i = 0; i < dropdown.length; i++) {
   option.value = dynamicOptions[i];
   dropdown.add(option);
 }
+// Delayed Content
+// Use a loop with a setTimeout to create a delayed effect, such as displaying messages one at a time.
